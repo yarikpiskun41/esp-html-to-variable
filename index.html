@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>HTML To Variable</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+<body>
+<main>
+  <div class="editor-container">
+    <div id="editor"></div>
+    <div class="frame-container">
+      <iframe id="iframe"></iframe>
+      <button class="new-tab-btn" id="new-site-tab-open"><img src="images/dock-window.svg"/></button>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="options">
+    <button id="save-btn"><img src="images/content-save.svg"/></button>
+    <button id="beautify-btn"><img src="images/flower-poppy.svg"/></button>
+    <button id="clear-btn"><img src="images/delete.svg"/></button>
+    <button id="convert-btn"><img src="images/file-code.svg"/></button>
+    <button id="footer-btn"><img src="images/console.svg"/></button>
+  </div>
+  <div class="code-transform">
+    <input id="variable-input" placeholder="Variable"/>
+    <div class="transformed-code-area">
+      <textarea aria-multiline="true" readonly id="result-area" ></textarea>
+      <button class="new-tab-btn" id="new-code-tab-open"><img src="images/dock-window.svg"/></button>
+    </div>
+
+  </div>
+
+</footer>
+<script src="libraries/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="libraries/ace/src-noconflict/ext-language_tools.js" type="text/javascript"></script>
+<script src="libraries/ace/src-noconflict/ext-beautify.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+main {
+  flex-grow: 1;
+  display: flex;
+}
+
+footer {
+  overflow: auto;
+}
+
+input,
+textarea,
+button {
+  display: block;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.editor-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+#editor {
+  width: 50%;
+  resize: horizontal;
+}
+
+.frame-container {
+  width: 50%;
+  resize: horizontal;
+  margin: 0;
+  border: 1px;
+  position: relative;
+  border-left: 2px solid #41423a;
+}
+
+#iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.code-transform {
+  padding: 0.5rem 2.5rem;
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #272822;
+  border-top: 2px solid #41423a;
+  border-bottom: 2px solid #41423a;
+  color: #fff;
+  overflow: auto;
+}
+
+.code-transform input,
+.code-transform textarea {
+  background-color: #272822;
+  color: #fff;
+}
+
+.transformed-code-area {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+.new-tab-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #AE81FF;
+  border: 2px solid #AE81FF;
+  width: 1.3rem;
+  cursor: pointer;
+  height: 1.3rem;
+  padding: 0.05rem;
+}
+
+#result-area {
+  border: 2px solid #41423a;
+  padding: 0.25rem 1.5rem 1.3rem 0.25rem;
+  color: #fff;
+  flex-grow: 1;
+}
+
+#variable-input {
+  border: 2px solid #41423a;
+  width: fit-content;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+
+}
+
+#variable-input::placeholder {
+  color: #aeb6b5;
+}
+
+.options {
+  padding: 0 2.25rem;
+  border-top: 2px solid #41423a;
+  background-color: #272822;
+  border-bottom: 2px solid #41423a;
+  display: flex;
+}
+
+.options button {
+  margin: 0.25rem 0.25rem;
+  background-color: #F92672;
+  border: 2px solid #e30455;
+  width: 1.75rem;
+  cursor: pointer;
+  height: 1.75rem;
+  padding: 0.075rem;
+}
+
+.options button:active {
+  background-color: #f3095a;
+  border: 2px solid #d5004a;
+}
+
+#footer-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: block;
+  }
+
+  .editor-container {
+    display: block;
+  }
+
+  .frame-container {
+    width: 100%;
+    height: calc(50vh - 21px);
+    border-left: none;
+  }
+
+  #editor {
+    width: 100%;
+    height: calc(50vh - 21px);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .code-transform {
+    padding: 0.5rem;
+    min-height: 8rem;
+  }
+
+  #variable-input {
+    width: 100%;
+  }
+
+  .options {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 0 0.5rem;
+  }
+  #footer-btn {
+    display: block;
+  }
+}
